@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+
+ <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,7 +50,7 @@
   border-radius:10px;
 }
 </style>
-</head> <body>
+</head> <body   onload="on()">
 
 <div id="overlay" onclick="of()">
   <button class="close" onclick="off()">Close</button>
@@ -57,8 +59,11 @@
 
 <div style="padding:20px">
   <h2>Overlay with Text</h2>
-  <div onloading="on()">Turn on overlay effect</div>
+  <div onclick="on()">Turn on overlay effect</div>
 </div>
+
+ <iframe src="meter.html"  onload="off()" > </iframe> 
+
 
 <script>
 function on() {
@@ -71,4 +76,4 @@ function off() {
 </script>
    
 </body>
-</html>
+</html> 
