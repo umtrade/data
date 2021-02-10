@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+ <title>overlay</title>
+
+ 
+<style>
+
+        #overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+  border-radius:10px;
+  text-align:right;
+  border:0px;
+  padding :0px;
+  margin:0px
+}
+
+        
+
+#text{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  width:100%;
+  font-size:normal;
+  color: #97D2DC;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  text-align:center;
+  border:0px;
+  padding :0px;
+  margin:0px;
+  
+}
+
+
+    
+     .close{
+  padding: 10px;
+  margin: 10px 5px 0px 0px;
+  color:#f1f1f1;
+  font-size:normal;
+  background: orange ;
+  border-radius:10px;
+}
+
+     .idiv{ width:100%;
+            border:none;
+            margin:0px;
+ }
+
+
+</style>
+
+</head> 
+<body   onload="on()">
+
+
+
+<div id="overlay" onclick="of()">
+
+  <button class="close" onclick="off()">Close</button>
+
+  <div id="text"> Text</div>
+</div>
+
+<div style="padding:20px">
+
+  <h2>Overlay with Text</h2>
+
+  <div onclick="on()">Turn on overlay effect</div>
+  
+</div>
+
+<div class="idiv">
+ <iframe src="index.html" class="idiv"  onload="off()" > </iframe>
+</div>
+
+ 
+
+
+<script>
+
+
+function on() {
+ document.getElementById("overlay").style.display = "block";
+}
+
+
+
+function off()
+ {
+ document.getElementById("overlay").style.display = "none";
+}
+
+
+</script>
+
+
+   
+</body>
+</html>
