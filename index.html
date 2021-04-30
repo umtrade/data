@@ -4,6 +4,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="css/style.css"/>
+  
+  
+ <script> 
+  function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+  </script>  
+  
 </head>
 <body onload="myFunction()" style="margin:0;">
 
@@ -11,17 +43,12 @@
 
 <div style="display:none;" id="myDiv" class="animate-bottom">
   
-  <table width="100%>
-    <tr>
-      <td>
-          <iframe src="https://umtrade.github.io/data/header.html"
-          style="border:0px #ffffff none;" name="myiFrame"
-          scrolling="no" frameborder="0" marginheight="0px"
-          marginwidth="0px" height="inherit" width="100%" allowfullscreen></iframe>
-      </td>
-    </tr>
-  </table>
-  
+ 
+<div w3-include-html="header.html"></div> 
+
+<script>
+includeHTML();
+</script>
   
   
 </div>
