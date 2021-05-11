@@ -1,0 +1,246 @@
+
+
+
+/*............................................................................*/
+/*............................................................................*/
+
+ *{box-sizing: border-box;}
+
+  html { 
+  background: url("../bg/background2.jpeg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding:0px;
+
+}
+
+
+.logo a img {
+        width:100px;
+        height:100px;
+
+}
+
+
+.top-container {
+  padding: 0px;
+  text-align: center;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.header {
+  padding: 10px 16px;
+  color: #f1f1f1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* Style the buttons */
+.btn {
+  border: 2px solid #DB7093 ;
+  outline: none;
+  padding: 10px 14px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 25px;
+  margin: 5px;
+  font-size:9px;
+  font-weight:bold;
+  opacity:1;
+
+}
+
+.btn:hover {
+  background-color: skyblue;
+}
+
+.btn.active {
+  background-color: darkred;
+  color: white;
+}
+
+/*--------------product card------------ */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  max-width: 200px;
+  margin: 10px 0px 10px 10px;
+  text-align: center;
+  font-family: georgia;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius:20px;
+  border:none;
+  padding:10px;
+  color: #f1f1f1;
+}
+
+.card:hover{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);}
+
+.card img {border-radius:20px;
+           border:none;
+}
+
+.price {
+  color: lightgreen;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.0);
+  border-radius:20px;
+}
+
+.card button {
+  border:none;
+  outline: 0;
+  padding: 12px;
+  color: #f1f1f1;
+  background-color:grey;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius:20px;
+
+}
+
+.card button:hover {
+  background: skyblue;
+  color: black;
+}
+/*---------------------------------------------- */
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background:black;
+   color: #DB7093;
+   text-align: center;
+}
+
+.GeneratedMarquee {
+   font-family:'Comic Sans MS';
+   line-height:20px;
+   color:white;
+   padding:5px;
+}
+
+
+.content {
+  color: #DB7093;
+  background: url("../bg/background3.jpeg") repeat;
+  text-align: center;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px
+}
+
+.content div{ max-width: 200px;
+       min-width: 150px;
+       margin:10px;
+        display: inline-block;
+       color: white;
+       text-align: center;
+       padding:10px 5px 10px 0px;
+       text-decoration: none;
+     }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.small{font-size: 15px;}
+
+.medium{font-size: 15px;
+        font-weight: bold;
+ }
+
+.no-pad{padding:0px;}
+
+
+
+/*---------------product images syyling-----------------*/
+
+.img-container{
+      background:url("../bg/background3.jpeg") repeat;
+     overflow: auto;
+     white-space: nowrap;
+}
+.img-container img {
+       max-width: 200px;
+       min-width: 150px;
+       margin:10px;
+        display: inline-block;
+       color: white;
+       text-align: center;
+       padding:10px 5px 10px 0px;
+       text-decoration: none;
+}
+
+
+/*-----------------------warning---------------------*/
+
+.alert {
+  padding: 20px;
+  background-color:#f1f1f1;
+  color: black;
+  border-radius:11px;
+  border: 1px solid red;
+  margin: 10px;
+
+  width: 60%;
+  text-align: center;
+  font: 15px sans-serif;
+  visibility: hidden;
+  animation: myAnimatio 0.1s linear 0.3s 15 forwards;
+}
+
+@keyframes myAnimatio {
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }   
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: black;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.6s;
+  text-decoration: blink;
+}
+
+.closebtn:hover {
+  color: red;
+
+}
+
+
+
+
+
+ 
