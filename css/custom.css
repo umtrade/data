@@ -7,7 +7,7 @@
  *{box-sizing: border-box;}
 
   html { 
-  background: url("../bg/background2.jpeg") no-repeat center center fixed; 
+  background:#ffffff; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
